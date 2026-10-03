@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sillage Club — Artisanat intemporel. Prix modernes.</title>
+<meta name="description" content="Sillage Club — a curated fragrance collection at a modern price.">
+<style>
+:root{--ink:#15130f;--paper:#f5f1e9;--muted:#71695e;--line:#d8d0c4;--gold:#987b53;--white:#fcfbf8;--dark:#171512}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:Georgia,"Times New Roman",serif}button{font:inherit}a{color:inherit}
+.nav{position:sticky;top:0;z-index:30;background:#f5f1e9e8;backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.navin{max-width:1180px;margin:auto;padding:17px 28px;display:flex;align-items:center;justify-content:space-between}.logo{font-size:18px;letter-spacing:.24em;text-transform:uppercase}.navlinks{display:flex;gap:27px;font:11px Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase}.navlinks a{text-decoration:none}.bagbtn{border:1px solid var(--ink);background:transparent;padding:9px 13px;cursor:pointer;font:10px Arial,sans-serif;letter-spacing:.12em;text-transform:uppercase}
+.hero{min-height:83vh;display:grid;place-items:center;text-align:center;padding:100px 24px 90px;background:radial-gradient(circle at 50% 34%,#9a805a20,transparent 31%),linear-gradient(#f8f5ef,#ebe4d9)}
+.definition{font:11px Arial,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:27px}.definition em{font-family:Georgia,serif;text-transform:none;letter-spacing:.01em;font-size:17px}.hero h1{font-size:clamp(48px,8vw,94px);font-weight:400;line-height:.9;margin:0 0 27px;letter-spacing:-.05em}.fr{font-size:clamp(20px,3vw,30px);font-style:italic;margin-bottom:38px}.hero p{max-width:600px;margin:auto;color:var(--muted);font-size:16px;line-height:1.75}.cta{display:inline-block;margin-top:36px;padding:14px 25px;background:var(--ink);color:var(--white);text-decoration:none;font:10px Arial,sans-serif;letter-spacing:.16em;text-transform:uppercase}
+.section{max-width:1180px;margin:auto;padding:96px 28px}.kicker{font:10px Arial,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:12px}.section h2{font-size:clamp(35px,5vw,56px);font-weight:400;margin:0 0 16px}.sectionintro{max-width:650px;color:var(--muted);line-height:1.75;margin-bottom:43px}
+.products{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}.card{background:#eae4da;border:1px solid var(--line);overflow:hidden}.card.featured{grid-column:span 2}.photo{aspect-ratio:4/5;background:#ddd;overflow:hidden}.card.featured .photo{aspect-ratio:16/8}.photo img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s}.card:hover .photo img{transform:scale(1.018)}.cardbody{padding:21px 22px 23px}.sub{font:10px Arial,sans-serif;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}.card h3{font-size:25px;font-weight:400;margin:0 0 15px}.cardrow{display:flex;justify-content:space-between;align-items:center;gap:15px}.price{font:13px Arial,sans-serif}.add{border:1px solid var(--ink);background:transparent;padding:10px 13px;cursor:pointer;font:10px Arial,sans-serif;letter-spacing:.1em;text-transform:uppercase}.add:hover{background:var(--ink);color:#fff}.stock{font:10px Arial,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#71695e;margin-top:10px}
+.story{background:var(--ink);color:white}.story .sectionintro{color:#cfc7bb}.storygrid{display:grid;grid-template-columns:1fr 1fr;gap:70px}.storybox{border-top:1px solid #ffffff33;padding-top:20px}.storybox h3{font-size:25px;font-weight:400;margin:0 0 12px}.storybox p{color:#cfc7bb;line-height:1.75;margin:0}
+.details{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}.detail{background:var(--paper);padding:28px}.detail h3{font-size:19px;font-weight:400;margin:0 0 10px}.detail p{font-size:14px;line-height:1.65;color:var(--muted);margin:0}
+.faq{border-top:1px solid var(--line)}.faq details{border-bottom:1px solid var(--line);padding:22px 0}.faq summary{cursor:pointer;font-size:18px}.faq p{max-width:760px;color:var(--muted);line-height:1.7;margin:14px 0 0}
+.contact{background:#e5ddd1}.contactgrid{display:grid;grid-template-columns:1fr 1fr;gap:60px}.contact a{font-size:20px}footer{background:var(--ink);color:#cfc7bb;padding:35px 28px;font:11px Arial,sans-serif;letter-spacing:.1em;text-transform:uppercase}.footerin{max-width:1180px;margin:auto;display:flex;justify-content:space-between;gap:20px}
+.drawer{position:fixed;inset:0;pointer-events:none;z-index:50}.drawer.open{pointer-events:auto}.scrim{position:absolute;inset:0;background:#00000059;opacity:0;transition:.25s}.drawer.open .scrim{opacity:1}.panel{position:absolute;right:0;top:0;height:100%;width:min(430px,93vw);background:var(--white);padding:28px;transform:translateX(100%);transition:.3s;overflow:auto}.drawer.open .panel{transform:translateX(0)}.panelhead{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line);padding-bottom:18px}.close{border:0;background:none;font-size:24px;cursor:pointer}.cartitem{display:flex;justify-content:space-between;gap:15px;padding:18px 0;border-bottom:1px solid var(--line);font-size:14px}.cartitem small{color:var(--muted)}.qty{display:flex;gap:7px;align-items:center;margin-top:7px}.qty button{width:24px;height:24px;border:1px solid var(--line);background:transparent;cursor:pointer}.empty{color:var(--muted);padding:25px 0}.subtotal{display:flex;justify-content:space-between;padding-top:20px;font-size:16px}.shippingbox{margin-top:18px;border-top:1px solid var(--line);padding-top:18px}.shippingbox label{display:block;font:11px Arial,sans-serif;letter-spacing:.08em;text-transform:uppercase;margin:11px 0;cursor:pointer}.shippingbox input{margin-right:8px}.checkout{width:100%;margin-top:20px;padding:15px;background:var(--ink);color:white;border:0;cursor:pointer;font:10px Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase}.checkout:disabled{opacity:.45;cursor:not-allowed}.notice{margin-top:12px;color:#71695e;font:11px Arial,sans-serif;line-height:1.5}.toast{position:fixed;left:50%;bottom:22px;transform:translate(-50%,120px);background:var(--ink);color:#fff;padding:12px 17px;font:11px Arial,sans-serif;z-index:80;transition:.25s}.toast.show{transform:translate(-50%,0)}
+.success{max-width:700px;margin:0 auto;padding:120px 24px;text-align:center}.success h1{font-size:54px;font-weight:400}.success p{color:var(--muted);line-height:1.7}
+@media(max-width:760px){.navin{padding:15px 18px}.navlinks{display:none}.hero{min-height:75vh;padding:75px 20px}.section{padding:70px 18px}.products{grid-template-columns:1fr}.card.featured{grid-column:span 1}.card.featured .photo{aspect-ratio:4/5}.storygrid,.contactgrid{grid-template-columns:1fr;gap:35px}.details{grid-template-columns:1fr}.footerin{flex-direction:column}}
+</style>
+</head>
+<body>
+<header class="nav"><div class="navin"><div class="logo">Sillage Club</div><nav class="navlinks"><a href="#collection">Collection</a><a href="#story">The Club</a><a href="#faq">FAQ</a><a href="#contact">Contact</a></nav><button class="bagbtn" onclick="openCart()">Bag (<span id="count">0</span>)</button></div></header>
+
+<main>
+<section class="hero"><div>
+<div class="definition"><em>Sillage</em> — the lingering trail of fragrance left in the air after someone passes.</div>
+<h1>Sillage Club</h1>
+<div class="fr">Artisanat intemporel. Prix modernes.</div>
+<p>A curated fragrance collection for those who appreciate presence, character and the ritual of wearing something memorable.</p>
+<a class="cta" href="#collection">Explore our current lineup</a>
+</div></section>
+
+<section class="section" id="collection">
+<div class="kicker">The collection</div><h2>Explore our current lineup.</h2>
+<p class="sectionintro">A focused selection of fragrances, chosen for their character and lasting impression. As Sillage Club grows, the lineup will grow with it.</p>
+<div class="products">
+<article class="card"><div class="photo"><img src="images/dior-sauvage.jpg" alt="Dior Sauvage Eau de Parfum"></div><div class="cardbody"><div class="sub">Dior</div><h3>Sauvage Eau de Parfum</h3><div class="cardrow"><span class="price">$119.99 · 100ml</span><button class="add" onclick="add('dior')">Add to bag</button></div></div></article>
+<article class="card"><div class="photo"><img src="images/ysl-libre.jpg" alt="YSL Libre Eau de Parfum"></div><div class="cardbody"><div class="sub">Yves Saint Laurent</div><h3>Libre Eau de Parfum</h3><div class="cardrow"><span class="price">$129.99 · 90ml</span><button class="add" onclick="add('libre')">Add to bag</button></div></div></article>
+<article class="card"><div class="photo"><img src="images/jpg-le-male-elixir.jpg" alt="Jean Paul Gaultier Le Male Elixir"></div><div class="cardbody"><div class="sub">Jean Paul Gaultier</div><h3>Le Male Elixir</h3><div class="cardrow"><span class="price">$129.99 · 125ml</span><button class="add" onclick="add('jpg')">Add to bag</button></div></div></article>
+<article class="card"><div class="photo"><img src="images/pdm-layton.jpg" alt="Parfums de Marly Layton"></div><div class="cardbody"><div class="sub">Parfums de Marly</div><h3>Layton</h3><div class="cardrow"><span class="price">$279.99 · 125ml</span><button class="add" onclick="add('layton')">Add to bag</button></div></div></article>
+<article class="card featured"><div class="photo"><img src="images/creed-aventus.jpg" alt="Creed Aventus"></div><div class="cardbody"><div class="sub">Creed</div><h3>Aventus</h3><div class="cardrow"><span class="price">$349.99 · 100ml</span><button class="add" onclick="add('aventus')">Add to bag</button></div></div></article>
+</div></section>
+
+<section class="story" id="story"><div class="section">
+<div class="kicker">Sillage Club</div><h2>Luxury, within reach.</h2>
+<p class="sectionintro">We believe exceptional fragrance should not have to feel out of reach. Sillage Club brings a curated selection to more people at a modern price.</p>
+<div class="storygrid">
+<div class="storybox"><h3>Curated, not crowded.</h3><p>We focus on a changing current lineup rather than an endless catalog — giving each fragrance room to make an impression.</p></div>
+<div class="storybox"><h3>From France to your door.</h3><p>Our fragrances are imported from France directly to our warehouse and then to you. We source through fragrance supply channels that allow us to offer selected bottles at a more accessible price.</p></div>
+</div></div></section>
+
+<section class="section"><div class="details">
+<div class="detail"><h3>Shipping</h3><p>U.S. orders generally arrive in 3–7 business days. Arizona local delivery is approximately 1–4 business days. International orders generally take 10–15 business days. Timing can vary by destination and carrier. U.S. shipping is $4, international shipping is $10, and Arizona local delivery is free.</p></div>
+<div class="detail"><h3>Returns</h3><p>Returns may be requested within 14 days of delivery. Return shipping is the customer's responsibility. We are not responsible for damage that occurs during return transit; please package items securely. Unopened, undamaged items returned because you changed your mind may be eligible for store credit after inspection.</p></div>
+<div class="detail"><h3>Questions?</h3><p>For orders, product questions or return requests, email meets.shop.us@gmail.com or message <strong>@sillage_club_</strong> on Instagram.</p></div>
+</div></section>
+
+<section class="section faq" id="faq"><div class="kicker">Good to know</div><h2>Questions, answered.</h2>
+<details><summary>Where are the fragrances sourced?</summary><p>Our current fragrances are imported from France to our warehouse before being prepared for delivery. We work through fragrance supply channels that allow us to source branded products at prices below traditional retail in selected cases.</p></details>
+<details><summary>Why are the prices lower than typical retail?</summary><p>Sillage Club is built around a curated inventory model and direct sourcing. Lower operating and sourcing costs can allow us to offer selected fragrances at a more accessible price.</p></details>
+<details><summary>Can I return a fragrance?</summary><p>Return requests must be made within 14 days of delivery. Return shipping is paid by the customer. Unopened, undamaged items that simply no longer suit your plans may be eligible for store credit after inspection. Please contact us before sending anything back.</p></details>
+<details><summary>How long does shipping take?</summary><p>Approximately 3–7 business days within the U.S., 1–4 business days for local Arizona delivery, and 10–15 business days internationally. Carrier and destination can affect actual delivery time.</p></details>
+</section>
+
+<section class="section contact" id="contact"><div class="contactgrid">
+<div><div class="kicker">Contact</div><h2>Stay in the club.</h2><p class="sectionintro">New scents, restocks and future drops will be added as the collection evolves.</p></div>
+<div><p><strong>Email</strong></p><a href="mailto:meets.shop.us@gmail.com">meets.shop.us@gmail.com</a><p style="margin-top:30px"><strong>Instagram</strong></p><a href="https://instagram.com/sillage_club_" target="_blank" rel="noopener">@sillage_club_</a></div>
+</div></section>
+</main>
+<footer><div class="footerin"><span>© 2026 Sillage Club</span><span>Timeless craftsmanship · Modern price</span></div></footer>
+
+<div class="drawer" id="drawer"><div class="scrim" onclick="closeCart()"></div><aside class="panel">
+<div class="panelhead"><strong>Your bag</strong><button class="close" onclick="closeCart()">×</button></div>
+<div id="items"><p class="empty">Your bag is empty.</p></div>
+<div class="shippingbox">
+<strong style="font-size:14px">Delivery</strong>
+<label><input type="radio" name="shipping" value="us" checked> U.S. shipping — $4</label>
+<label><input type="radio" name="shipping" value="az"> Arizona local — Free</label>
+<label><input type="radio" name="shipping" value="intl"> International — $10</label>
+</div>
+<button id="checkoutBtn" class="checkout" onclick="checkout()" disabled>Continue to checkout</button>
+<p class="notice">Shipping is charged once per order. Stripe will collect your shipping address and payment securely.</p>
+</aside></div>
+<div class="toast" id="toast"></div>
+
+<script>
+const PRODUCTS={
+  dior:{name:'Dior Sauvage Eau de Parfum',size:'100ml',price:119.99},
+  libre:{name:'YSL Libre Eau de Parfum',size:'90ml',price:129.99},
+  jpg:{name:'Jean Paul Gaultier Le Male Elixir',size:'125ml',price:129.99},
+  layton:{name:'Parfums de Marly Layton',size:'125ml',price:279.99},
+  aventus:{name:'Creed Aventus',size:'100ml',price:349.99}
+};
+let bag=[];
+
+function add(id){bag.push(id);render();openCart();toast('Added to your bag');}
+function change(id,delta){const i=bag.indexOf(id); if(delta>0) bag.push(id); else if(i>-1) bag.splice(i,1); render();}
+function render(){
+  document.getElementById('count').textContent=bag.length;
+  const el=document.getElementById('items'), btn=document.getElementById('checkoutBtn');
+  if(!bag.length){el.innerHTML='<p class="empty">Your bag is empty.</p>';btn.disabled=true;return}
+  const groups={}; bag.forEach(id=>groups[id]=(groups[id]||0)+1);
+  let subtotal=0;
+  el.innerHTML=Object.entries(groups).map(([id,qty])=>{
+    const p=PRODUCTS[id]; subtotal+=p.price*qty;
+    return `<div class="cartitem"><span>${p.name}<br><small>${p.size} · $${p.price.toFixed(2)}</small><span class="qty"><button onclick="change('${id}',-1)">−</button><span>${qty}</span><button onclick="change('${id}',1)">+</button></span></span></div>`
+  }).join('')+`<div class="subtotal"><strong>Subtotal</strong><strong>$${subtotal.toFixed(2)}</strong></div>`;
+  btn.disabled=false;
+}
+function openCart(){document.getElementById('drawer').classList.add('open')}
+function closeCart(){document.getElementById('drawer').classList.remove('open')}
+function toast(msg){const t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),1600)}
+async function checkout(){
+  if(!bag.length)return;
+  const shipping=document.querySelector('input[name="shipping"]:checked').value;
+  const btn=document.getElementById('checkoutBtn'); btn.disabled=true; btn.textContent='Opening secure checkout…';
+  const counts={}; bag.forEach(id=>counts[id]=(counts[id]||0)+1);
+  try{
+    const r=await fetch('/api/create-checkout-session',{
+      method:'POST',headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({items:counts,shipping})
+    });
+    const data=await r.json();
+    if(!r.ok)throw new Error(data.error||'Checkout could not be started.');
+    window.location.href=data.url;
+  }catch(e){alert(e.message)}
+  finally{btn.disabled=false;btn.textContent='Continue to checkout'}
+}
+render();
+</script>
+</body>
+</html>
